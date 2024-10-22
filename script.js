@@ -20,12 +20,12 @@ const image = document.querySelector('img');
 // SOLUZIONE CON NOME CLASSE DELL'IMMAGINE COME CONDIZONE IF 
 
 button.addEventListener("click", function () {
-    if (image.className ==='lampOff') {
+    if (image.className.includes('lampOff')) {
         lamp.src = "./img/yellow_lamp.png";
         button.textContent = 'Spegni';
         image.classList.replace("lampOff", "lampOn");
         console.log('acceso');
-    } else if (image.className ==='lampOn') {
+    } else {
         lamp.src="./img/white_lamp.png";
         button.textContent='Accendi';
         image.classList.replace("lampOn", "lampOff");
